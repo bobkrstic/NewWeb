@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My First Web page 1234567 ABCDE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My First Web page 1234567 ABCDE</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header class="header">
+      <a class="logo">My Life</a>
+      <nav class="navbar">
+        <a href="about.html">Early Life</a>
+        <a href="">Career</a>
+        <a href="">Family</a>
+        <a href="">Photos Test</a>
+      </nav>
+    </header>
 
-<body>
-  <header class="header">
-    <a class="logo">My Life</a>
-    <nav class="navbar">
-      <a href="about.html">Early Life</a>
-      <a href="">Career</a>
-      <a href="">Family</a>
-      <a href="">Photos Test</a>
-    </nav>
-  </header>
+    <main>
+      <div>
+        <img src="images/profile.jpg" alt="Profile Image" />
+      </div>
 
-  <main>
-    <div>
-      <img src="images/profile.jpg" alt="Profile Image" />
-    </div>
+      <p class="username">- Bob Krstic</p>
+      <p class="">Some text 1234567890</p>
+      <button class="button-55" role="button" onclick="myFunction()">
+        Click Here
+      </button>
+      <p id="demo">Text</p>
+      <div class="container">
+        <div class="box">
+          <div>
+            <img src="images/profile.jpg" alt="Profile Image" />
+          </div>
+          <p class="username">- Bob Krstic</p>
+          <p class="">Some text 1234567890</p>
+          <button class="button-55" role="button" onclick="myFunction()">
+            Click Here
+          </button>
+          <p id="demo1">Text</p>
+        </div>
+        <div class="box">Middle div</div>
+        <div class="box">right div</div>
+      </div>
+    </main>
 
-    <p class="username">- Bob Krstic</p>
-    <p class="">Some text 1234567890</p>
-    <button class="button-55" role="button" onclick="myFunction()">
-      Click Here
-    </button>
-    <p id="demo">Text</p>
-  </main>
-
-  <script>
-    function myFunction() {
-      document.getElementById("demo").innerHTML = "Be Nice";
-    }
-  </script>
-</body>
-
+    <script>
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = "Be Nice";
+      }
+    </script>
+  </body>
 </html>

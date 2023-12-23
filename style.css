@@ -60,16 +60,44 @@ body {
 }
 
 img {
-  width: 150px;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
   border: 1px solid black;
+  display: block;
   /* float: right; */
-  margin: 20px;
+  /* margin: 20px; */
+  /* overflow: hidden; */
+  object-fit: cover;
 }
 
 .username {
   font-weight: bold;
   color: #cb3e33;
+}
+
+.container {
+  /* width: 100%; */
+  text-align: center;
+  display: flex;
+  border: 1px solid black;
+}
+
+.container > div {
+  flex: 1; /* Make each div take equal space */
+  border: 1px solid #ccc; /* Optional: for visualization */
+  padding: 10px; /* Optional: add padding */
+}
+
+.box {
+  width: 30%; /* Adjust the width as needed */
+  display: inline-block;
+  margin: 5px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  overflow: hidden;
+  border: 1px solid black;
 }
 
 /* .button-55 {
