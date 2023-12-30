@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My First Web page 1234567 ABCDE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My First Web page 1234567 ABCDE</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header class="header">
+      <a class="logo">My Life</a>
+      <nav class="navbar">
+        <a href="about.html">Early Life</a>
+        <a href="">Career</a>
+        <a href="">Family</a>
+        <a href="">Photos Test</a>
+      </nav>
+    </header>
 
-<body>
-  <header class="header">
-    <a class="logo">My Life</a>
-    <nav class="navbar">
-      <a href="about.html">Early Life</a>
-      <a href="">Career</a>
-      <a href="">Family</a>
-      <a href="">Photos Test</a>
-    </nav>
-  </header>
+    <main>
+      <div>
+        <img src="images/profile.jpg" alt="Profile Image" />
+      </div>
 
-  <main>
-    <div>
-      <img src="images/profile.jpg" alt="Profile Image" />
-    </div>
-
-    <p class="username">- Bob Krstic</p>
-    <p class="">Some text 1234567890</p>
-    <button class="button-55" role="button" onclick="myFunction()">
-      Click Here
-    </button>
-    <p id="demo">Text</p>
-    <div class="container">
-      <div class="box">
-        <div>
-          <img src="images/profile.jpg" alt="Profile Image" />
+      <p class="username">- Bob Krstic</p>
+      <p class="">Some text 1234567890</p>
+      <button class="button-55" role="button" onclick="myFunction()">
+        Click Here
+      </button>
+      <p id="demo">Text</p>
+      <div class="container">
+        <div class="box">
+          <div>
+            <img src="images/profile.jpg" alt="Profile Image" />
+          </div>
+          <p class="username">- Bob Krstic</p>
+          <p class="">Some text 1234567890</p>
+          <button class="button-55" role="button" onclick="myFunction()">
+            Click Here
+          </button>
+          <p id="demo1">Text</p>
         </div>
-        <p class="username">- Bob Krstic</p>
-        <p class="">Some text 1234567890</p>
-        <button class="button-55" role="button" onclick="myFunction()">
-          Click Here
-        </button>
-        <p id="demo1">Text</p>
+        <div class="box box-middle">
+          <div class="box-middle-small">
+            Middle div top
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="box-middle-small">bottom</div>
+        </div>
+        <div class="box">
+          right div
+          <!-- <iframe id="myIframe" src="about.html" style="width: 100%; height: 100%; border: none;"></iframe> -->
+          <button onclick="loadPage('about.html')">Load Page 2</button>
+          <div id="displayedPage" style="width: 100%; height: 500px"></div>
+        </div>
       </div>
-      <div class="box box-middle">
-        <div class="box-middle-small">Middle div top</div>
-        <div class="box-middle-small">bottom</div>
-      </div>
-      <div class="box">right div
-        <!-- <iframe id="myIframe" src="about.html" style="width: 100%; height: 100%; border: none;"></iframe> -->
-        <button onclick="loadPage('about.html')">Load Page 2</button>
-        <div id="displayedPage" style="width: 100%; height: 500px;"></div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <script>
-    function myFunction() {
-      document.getElementById("demo1").innerHTML = "Be Nice";
-    }
+    <script>
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = "Be Nice";
+      }
 
-    function loadPage(pageUrl) {
-      fetch(pageUrl)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('displayedPage').innerHTML = data;
-        })
-        .catch(error => console.log(error));
-    }
-  </script>
-</body>
-
+      function loadPage(pageUrl) {
+        fetch(pageUrl)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("displayedPage").innerHTML = data;
+          })
+          .catch((error) => console.log(error));
+      }
+    </script>
+  </body>
 </html>

@@ -101,12 +101,12 @@ img {
 }
 
 .box-middle {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
-.box-middle-small{
-  flex:1;
+.box-middle-small {
+  flex: 1;
   border: 1px solid red;
 }
 
